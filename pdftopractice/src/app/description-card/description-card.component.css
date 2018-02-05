@@ -1,0 +1,12 @@
+h2 {
+  font-size: 25px;
+  color: #555;
+}
+
+p {
+  font-size: 15px;
+  letter-spacing: -2.5px;
+  max-width: 70%;
+  margin: 0 auto;
+  color: #8f9399;
+}
