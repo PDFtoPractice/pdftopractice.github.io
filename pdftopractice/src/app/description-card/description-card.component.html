@@ -1,4 +1,20 @@
-<h2>What is 'Should I take?'?</h2>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<div ng-controller="tab">
+  <button class="tablinks" ng-click="openDescription(event, 'What is SHOULD I TAKE?')" id="defaultOpen">What is SHOULD I TAKE?</button>
+  <button class="tablinks" ng-click="openDescription(event, 'Who are we?')">Who are we?</button>
+  <button class="tablinks" ng-click="openDescription(event, 'Disclaimer')">Disclaimer</button>
+</div>
+
+<div id="What is SHOULD I TAKE?" class="tabcontent">
+  <h2>What is SHOULD I TAKE?</h2>
+  <p>Should I take is an app.</p>
+</div>
+
+<div id="Who are we?" class="tabcontent">
+  <h2>Who are we?</h2>
+  <p>We are some very cool people.</p>
+</div>
+
+<div id="Disclaimer" class="tabcontent">
+  <h2>Disclaimer</h2>
+  <p>Don't trust us, we have no idea what we are doing.</p>
+</div>
