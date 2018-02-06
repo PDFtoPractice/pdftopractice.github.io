@@ -3,6 +3,13 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { DescriptionCardComponent } from './description-card/description-card.component';
+import { DataCardComponent } from './data-card/data-card.component';
+
+import { MaterialImportsModule } from './material-imports/material-imports.module';
+
+import { FormsModule } from '@angular/forms';
+
+import { AdviceService } from './advice.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -10,8 +17,14 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         NameCardComponent,
-        DescriptionCardComponent
+        DescriptionCardComponent,
+        DataCardComponent
       ],
+      imports: [
+        FormsModule,
+        MaterialImportsModule
+      ],
+      providers: [AdviceService]
     }).compileComponents();
   }));
 

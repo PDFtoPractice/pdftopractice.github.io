@@ -23,8 +23,8 @@ import { AdviceService } from './advice.service';
   ],
   imports: [
     BrowserModule,
-    MaterialImportsModule,
-    FormsModule
+    FormsModule,
+    MaterialImportsModule
   ],
   providers: [AdviceService],
   bootstrap: [AppComponent]
