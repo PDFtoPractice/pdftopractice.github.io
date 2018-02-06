@@ -28,4 +28,6 @@ before_script:
 
 script:
   - ng test --watch false
-  - ng build --prod
+
+after_success:
+  - ng build -- prod
