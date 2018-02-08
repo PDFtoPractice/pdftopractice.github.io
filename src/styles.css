@@ -1,8 +1,9 @@
-h1, h2, p {
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
   font-family: CoreCircus, sans-serif;
   font-size: 20px;
   letter-spacing: -4px;
-
 }
 
 /*
