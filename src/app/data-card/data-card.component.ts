@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { AdviceService } from '../advice.service';
 
+import { Advice } from '../model/Advice';
+
 @Component({
   selector: 'app-data-card',
   templateUrl: './data-card.component.html',
@@ -9,9 +11,7 @@ import { AdviceService } from '../advice.service';
 })
 export class DataCardComponent implements OnInit {
 
-  drug : string;
-  operation : string;
-  advice : string;
+  private advice = new Advice('','','');
 
   constructor(private adviceService : AdviceService) { }
 
@@ -20,6 +20,9 @@ export class DataCardComponent implements OnInit {
 
   getAdvice() : void {
     // TODO: Sanitise inputs (maybe dropdown in html)
-    this.advice = this.adviceService.getAdvice(this.drug, this.operation);
+    this.adviceService.getAdvice(this.advice.drug, this.advice.operation)
+      .subscribe((advice : Advice) => {
+        this.advice = advice;
+      });
   }
 }
