@@ -9,8 +9,7 @@ export class DescriptionCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   openDescription(evt, tabTitle) {
     var i, tabcontent, tablinks;
@@ -20,13 +19,11 @@ export class DescriptionCardComponent implements OnInit {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    if (tabTitle == "defaultOpen") {
-      document.getElementById(tabTitle).click();
+      tablinks[i].removeclass('active').addclass('inactive');
     }
     document.getElementById(tabTitle).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.removeclass('inactive').addclass('active');
+
   }
 
 }

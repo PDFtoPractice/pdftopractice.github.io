@@ -1,7 +1,7 @@
-<div ng-controller="tab">
-  <button class="tablinks" ng-click="openDescription(event, 'What is SHOULD I TAKE?')" id="defaultOpen">What is SHOULD I TAKE?</button>
-  <button class="tablinks" ng-click="openDescription(event, 'Who are we?')">Who are we?</button>
-  <button class="tablinks" ng-click="openDescription(event, 'Disclaimer')">Disclaimer</button>
+<div class="tab">
+    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'What is SHOULD I TAKE?')">What is SHOULD I TAKE?</button>
+    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'Who are we?')">Who are we?</button>
+    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'Disclaimer')">Disclaimer</button>
 </div>
 
 <div id="What is SHOULD I TAKE?" class="tabcontent">
