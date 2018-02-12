@@ -1,7 +1,7 @@
 <div class="tab">
-    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'What is SHOULD I TAKE?')">What is SHOULD I TAKE?</button>
-    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'Who are we?')">Who are we?</button>
-    <button class="tablinks" class="inactive" (click)="openDescription(evt, 'Disclaimer')">Disclaimer</button>
+  <button class="tablinks" (click)="openDescription(evt, 'What is SHOULD I TAKE?')">What is SHOULD I TAKE?</button>
+  <button class="tablinks" (click)="openDescription(evt, 'Who are we?')">Who are we?</button>
+  <button class="tablinks" (click)="openDescription(evt, 'Disclaimer')">Disclaimer</button>
 </div>
 
 <div id="What is SHOULD I TAKE?" class="tabcontent">
@@ -17,4 +17,8 @@
 <div id="Disclaimer" class="tabcontent">
   <h2>Disclaimer</h2>
   <p>Don't trust us, we have no idea what we are doing.</p>
+</div>
+
+<div class="nextpage">
+  <button (click)="goNextPage()" mat-button color="primary">Go to App</button>
 </div>

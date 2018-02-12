@@ -19,7 +19,7 @@ p {
     width: 300px;
     height: 210px;
     margin-top: 20px;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 /* Style the buttons inside the tab */
@@ -39,20 +39,11 @@ p {
 }
 
 /* Change background color of buttons on hover and when active */
-.tab button:hover {
-    background-color: #448AFF;
+* button:hover, button:focus {
+    background-color: #5C6BC0;
     color: white;
 }
 
-.active {
-  background-color: #448AFF;
-  color: white;
-}
-
-.inactive {
-  background-color: inherit;
-  color: black;
-}
 /* Style the tab content */
 .tabcontent {
     float: left;
@@ -64,4 +55,11 @@ p {
     border-left: none;
     height: 210px;
     display:none;
+}
+
+/* Style the button for the next page */
+.nextpage button{
+  position:absolute;
+  bottom:15%;
+  right: 25%;
 }
