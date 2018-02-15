@@ -12,6 +12,7 @@ import { DescriptionCardComponent } from './description-card/description-card.co
 import { DataCardComponent } from './data-card/data-card.component';
 
 import { AdviceService } from './advice.service';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdviceService } from './advice.service';
     NameCardComponent,
     FilterCardComponent,
     DescriptionCardComponent,
-    DataCardComponent
+    DataCardComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

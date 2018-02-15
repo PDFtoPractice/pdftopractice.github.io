@@ -1,15 +1,17 @@
-<mat-card>
-  <form>
-    <mat-form-field>
-      <input matInput name="drug" placeholder="Drug" [(ngModel)]="advice.drug">
-    </mat-form-field>
+<div>
+  <mat-card>
+    <form>
+      <mat-form-field>
+        <input matInput name="drug" placeholder="Drug" [(ngModel)]="advice.drug">
+      </mat-form-field>
 
-    <mat-form-field>
-      <input matInput name="operation" placeholder="Operation" [(ngModel)]="advice.operation">
-    </mat-form-field>
+      <mat-form-field>
+        <input matInput name="operation" placeholder="Operation" [(ngModel)]="advice.operation">
+      </mat-form-field>
 
-    <button (click)="getAdvice()" mat-button color="primary">Get Results</button>
-  </form>
+      <button (click)="getAdvice()" mat-button color="primary">Get Results</button>
+    </form>
 
-  <p>{{advice.advice}}</p>
-</mat-card>
+    <p>{{advice.advice}}</p>
+  </mat-card>
+</div>

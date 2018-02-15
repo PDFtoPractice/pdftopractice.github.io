@@ -1,0 +1,33 @@
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+ul li {
+  display: inline;
+  color: white;
+}
+
+ul.left li {
+  font-size: 20px;
+}
+
+ul.right li {
+  padding: 0 40px;
+}
+
+ul.right li a {
+  font-size: 14px;
+}
+
+ul.right li button {
+  font-size: 14px;
+  border: 1px solid white;
+}
+
+a {
+  cursor: pointer;
+}

@@ -1,9 +1,5 @@
 <div>
-  <app-name-card></app-name-card>
-</div>
-
-<div style="text-align: center">
-  <!-- <app-data-card></app-data-card> -->
-  <app-description-card></app-description-card>
-  <!-- <app-filter-card> </app-filter-card> -->
+  <app-navigation (toggled)="toggle($event)"></app-navigation>
+  <app-name-card (toggled)="toggle($event)" *ngIf="pages.name"></app-name-card>
+  <app-data-card *ngIf="pages.data"></app-data-card>
 </div>
