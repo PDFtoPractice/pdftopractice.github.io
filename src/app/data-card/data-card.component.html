@@ -1,17 +1,48 @@
 <div>
   <mat-card>
-    <form>
-      <mat-form-field>
-        <input matInput name="drug" placeholder="Drug" [(ngModel)]="advice.drug">
-      </mat-form-field>
+    <mat-tab-group>
+      <mat-tab label="Drug Interaction">
+        <form>
+          <mat-form-field>
+            <input matInput name="drug1" placeholder="Drug 1" [(ngModel)]="interaction.drug1">
+          </mat-form-field>
 
-      <mat-form-field>
-        <input matInput name="operation" placeholder="Operation" [(ngModel)]="advice.operation">
-      </mat-form-field>
+          <mat-form-field>
+            <input matInput name="drug2" placeholder="Drug 2" [(ngModel)]="interaction.drug2">
+          </mat-form-field>
 
-      <button (click)="getAdvice()" mat-button color="primary">Get Results</button>
-    </form>
+          <button (click)="getInteraction()" mat-button color="primary">Get Results</button>
+        </form>
+      </mat-tab>
 
-    <p>{{advice.advice}}</p>
+      <mat-tab label="Drug-Operation">
+          <form>
+            <mat-form-field>
+              <input matInput name="drug1" placeholder="Drug" [(ngModel)]="drugOperation.drug1">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput name="operation" placeholder="Operation" [(ngModel)]="drugOperation.operation">
+            </mat-form-field>
+
+            <button (click)="getDrugOperation()" mat-button color="primary">Get Results</button>
+          </form>
+        </mat-tab>
+
+        <mat-tab label="Drug-Condition">
+            <form>
+              <mat-form-field>
+                <input matInput name="drug" placeholder="Drug" [(ngModel)]="drugCondition.drug">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput name="condition" placeholder="Condition" [(ngModel)]="drugCondition.condition">
+              </mat-form-field>
+
+              <button (click)="getDrugCondition()" mat-button color="primary">Get Results</button>
+            </form>
+          </mat-tab>
+    </mat-tab-group>
+    <p>{{drugOperation.advice}}</p>
   </mat-card>
 </div>
