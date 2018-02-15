@@ -7,7 +7,7 @@ export class MockAdviceService {
 
   getAdvice(drug : string, operation : string) : Observable<Advice> {
     return Observable.create((observer) => {
-      observer.next(new Advice(drug, operation, 'Consult a doctor'));
+      observer.next(new Advice(drug, '', operation, '', 'Consult a doctor'));
     });
   }
 }
