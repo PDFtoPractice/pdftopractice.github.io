@@ -11,9 +11,9 @@ import { Advice } from '../model/Advice';
 })
 export class DataCardComponent implements OnInit {
 
-  private interaction = new Advice('','','','','');
-  private drugOperation = new Advice('','','','','');
-  private drugCondition = new Advice('','','','','');
+  public interaction = new Advice('','','','','');
+  public drugOperation = new Advice('','','','','');
+  public drugCondition = new Advice('','','','','');
 
   constructor(private adviceService : AdviceService) { }
 
@@ -26,5 +26,13 @@ export class DataCardComponent implements OnInit {
       .subscribe((advice : Advice) => {
         this.drugOperation = advice;
       });
+  }
+
+  getInteraction() : void {
+
+  }
+
+  getDrugCondition() : void {
+
   }
 }
