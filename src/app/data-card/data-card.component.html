@@ -4,11 +4,13 @@
       <mat-tab label="Drug Interaction">
         <form>
           <mat-form-field>
-            <input matInput name="drug1" placeholder="Drug 1" [(ngModel)]="interaction.drug1">
+            <mat-label>First Drug Name</mat-label>
+            <input matInput name="drug1" required="true" placeholder="Please provide the name of the first drug." [(ngModel)]="interaction.drug1">
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput name="drug2" placeholder="Drug 2" [(ngModel)]="interaction.drug2">
+            <mat-label>Second Drug Name</mat-label>
+            <input matInput name="drug2" required="true" placeholder="Please provide the name of the second drug." [(ngModel)]="interaction.drug2">
           </mat-form-field>
 
           <button (click)="getInteraction()" mat-button color="primary">Get Results</button>
@@ -18,11 +20,13 @@
       <mat-tab label="Drug-Operation">
           <form>
             <mat-form-field>
-              <input matInput name="drug1" placeholder="Drug" [(ngModel)]="drugOperation.drug1">
+              <mat-label>Ongoing Medication</mat-label>
+              <input matInput name="drug1" required="true" placeholder="Please provide a drug you are currently taking." [(ngModel)]="drugOperation.drug1">
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput name="operation" placeholder="Operation" [(ngModel)]="drugOperation.operation">
+              <mat-label>Operation</mat-label>
+              <input matInput name="operation"  required="true" placeholder="Please provide the operation you are going to have." [(ngModel)]="drugOperation.operation">
             </mat-form-field>
 
             <button (click)="getDrugOperation()" mat-button color="primary">Get Results</button>
@@ -32,11 +36,13 @@
         <mat-tab label="Drug-Condition">
             <form>
               <mat-form-field>
-                <input matInput name="drug" placeholder="Drug" [(ngModel)]="drugCondition.drug1">
+                <mat-label>Medical Condition</mat-label>
+                <input matInput name="condition" required="true" placeholder="Please provide your medical condition." [(ngModel)]="drugCondition.condition">
               </mat-form-field>
 
               <mat-form-field>
-                <input matInput name="condition" placeholder="Condition" [(ngModel)]="drugCondition.condition">
+                <mat-label>Drug Name</mat-label>
+                <input matInput name="drug" required="true" placeholder="Please provide the name of the drug you want to take." [(ngModel)]="drugCondition.drug1">
               </mat-form-field>
 
               <button (click)="getDrugCondition()" mat-button color="primary">Get Results</button>
