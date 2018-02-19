@@ -21,7 +21,7 @@ describe('AdviceService', () => {
 
   it('should return advice observable', () => {
     mockService.getAdvice('DrugA', 'OperationA').subscribe((advice : Advice) => {
-      expect(advice.drug).toBe('DrugA');
+      expect(advice.drug1).toBe('DrugA');
       expect(advice.operation).toBe('OperationA');
       expect(advice.advice).toBe('Consult a doctor');
     });

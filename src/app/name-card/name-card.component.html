@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <img src="https://images.pexels.com/photos/143654/pexels-photo-143654.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="Medical">
   <mat-toolbar class="toolbar">
     <a class="active" href="#home">Home</a>
@@ -6,5 +6,33 @@
   </mat-toolbar>
   <h1>{{appname}}
   <!-- <button (click)="goNextPage()" mat-button color="primary">Go to App</button> -->
-  </h1>
+  <!-- </h1> -->
+<!-- </div> -->
+
+<div id="outer-container">
+  <h2>Get Quick Advice on Drug Interaction</h2>
+
+  <div id="card-container">
+    <mat-card>
+      <mat-card-header>What is Should I Take?</mat-card-header>
+      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</mat-card-content>
+      <button mat-button (click)="toggle('about')">Find Out More</button>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>Who Are We?</mat-card-header>
+      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</mat-card-content>
+      <button mat-button (click)="toggle('aboutUs')">See More</button>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>Disclaimer</mat-card-header>
+      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</mat-card-content>
+      <button mat-button (click)="toggle('disclaimer')">See In Full</button>
+    </mat-card>
+  </div>
+
+  <div id="button-container">
+    <button mat-button (click)="toggle('data')">Go To App</button>
+  </div>
 </div>

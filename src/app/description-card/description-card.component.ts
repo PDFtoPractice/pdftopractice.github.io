@@ -11,7 +11,7 @@ export class DescriptionCardComponent implements OnInit {
 
   ngOnInit() { }
 
-  openDescription(evt, tabTitle) {
+  openDescription(tabTitle) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -21,6 +21,6 @@ export class DescriptionCardComponent implements OnInit {
   }
 
   goNextPage(){
-    
+
   }
 }

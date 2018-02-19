@@ -11,18 +11,28 @@ import { Advice } from '../model/Advice';
 })
 export class DataCardComponent implements OnInit {
 
-  private advice = new Advice('','','');
+  public interaction = new Advice('','','','','');
+  public drugOperation = new Advice('','','','','');
+  public drugCondition = new Advice('','','','','');
 
   constructor(private adviceService : AdviceService) { }
 
   ngOnInit() {
   }
 
-  getAdvice() : void {
+  getDrugOperation() : void {
     // TODO: Sanitise inputs (maybe dropdown in html)
-    this.adviceService.getAdvice(this.advice.drug, this.advice.operation)
+    this.adviceService.getAdvice(this.drugOperation.drug1, this.drugOperation.operation)
       .subscribe((advice : Advice) => {
-        this.advice = advice;
+        this.drugOperation = advice;
       });
+  }
+
+  getInteraction() : void {
+
+  }
+
+  getDrugCondition() : void {
+
   }
 }
