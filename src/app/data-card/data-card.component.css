@@ -10,3 +10,9 @@ mat-card {
 mat-form-field {
   display: block;
 }
+
+/* body {
+  background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
+  background-repeat: no-repeat;
+  height: 100%;
+} */

@@ -4,14 +4,6 @@
 
 * {
   font-family: Roboto;
-  /* font-size: 20px; */
-  /* letter-spacing: -4px; */
-}
-
-html, body {
-  background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
-  background-repeat: no-repeat;
-  height: 100%;
 }
 
 /*
