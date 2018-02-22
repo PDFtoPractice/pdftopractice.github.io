@@ -1,23 +1,24 @@
-<div>
-  <mat-card *ngIf="!showResults">
-    <mat-tab-group (selectedTabChange)="updateType($event)">
-      <mat-tab label="Drug Interaction">
-        <form>
-          <mat-form-field>
-            <mat-label>First Drug Name</mat-label>
-            <input matInput name="drug1" required="true" placeholder="Please provide the name of the first drug." [(ngModel)]="results.value1">
-          </mat-form-field>
+<body>
+  <div>
+    <mat-card *ngIf="!showResults">
+      <mat-tab-group (selectedTabChange)="updateType($event)">
+        <mat-tab label="Drug Interaction">
+          <form>
+            <mat-form-field>
+              <mat-label>First Drug Name</mat-label>
+              <input matInput name="drug1" required="true" placeholder="Please provide the name of the first drug." [(ngModel)]="results.value1">
+            </mat-form-field>
 
-          <mat-form-field>
-            <mat-label>Second Drug Name</mat-label>
-            <input matInput name="drug2" required="true" placeholder="Please provide the name of the second drug." [(ngModel)]="results.value2">
-          </mat-form-field>
+            <mat-form-field>
+              <mat-label>Second Drug Name</mat-label>
+              <input matInput name="drug2" required="true" placeholder="Please provide the name of the second drug." [(ngModel)]="results.value2">
+            </mat-form-field>
 
-          <button (click)="getInteraction()" mat-button color="primary">Get Results</button>
-        </form>
-      </mat-tab>
+            <button (click)="getInteraction()" mat-button color="primary">Get Results</button>
+          </form>
+        </mat-tab>
 
-      <mat-tab label="Drug-Operation">
+        <mat-tab label="Drug-Operation">
           <form>
             <mat-form-field>
               <mat-label>Ongoing Medication</mat-label>
@@ -26,7 +27,7 @@
 
             <mat-form-field>
               <mat-label>Operation</mat-label>
-              <input matInput name="operation"  required="true" placeholder="Please provide the operation you are going to have." [(ngModel)]="results.value2">
+              <input matInput name="operation" required="true" placeholder="Please provide the operation you are going to have." [(ngModel)]="results.value2">
             </mat-form-field>
 
             <button (click)="getDrugOperation()" mat-button color="primary">Get Results</button>
@@ -34,22 +35,23 @@
         </mat-tab>
 
         <mat-tab label="Drug-Condition">
-            <form>
-              <mat-form-field>
-                <mat-label>Medical Condition</mat-label>
-                <input matInput name="condition" required="true" placeholder="Please provide your medical condition." [(ngModel)]="results.value1">
-              </mat-form-field>
+          <form>
+            <mat-form-field>
+              <mat-label>Medical Condition</mat-label>
+              <input matInput name="condition" required="true" placeholder="Please provide your medical condition." [(ngModel)]="results.value1">
+            </mat-form-field>
 
-              <mat-form-field>
-                <mat-label>Drug Name</mat-label>
-                <input matInput name="drug" required="true" placeholder="Please provide the name of the drug you want to take." [(ngModel)]="results.value2">
-              </mat-form-field>
+            <mat-form-field>
+              <mat-label>Drug Name</mat-label>
+              <input matInput name="drug" required="true" placeholder="Please provide the name of the drug you want to take." [(ngModel)]="results.value2">
+            </mat-form-field>
 
-              <button (click)="getDrugCondition()" mat-button color="primary">Get Results</button>
-            </form>
-          </mat-tab>
-    </mat-tab-group>
-    <!-- <p>{{drugOperation.advice}}</p> -->
-  </mat-card>
-  <app-results-card *ngIf="showResults" [results]="results"></app-results-card>
-</div>
+            <button (click)="getDrugCondition()" mat-button color="primary">Get Results</button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+      <!-- <p>{{drugOperation.advice}}</p> -->
+    </mat-card>
+    <app-results-card *ngIf="showResults" [results]="results"></app-results-card>
+  </div>
+</body>

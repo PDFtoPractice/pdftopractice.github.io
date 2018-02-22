@@ -11,9 +11,6 @@ export class AppComponent {
   public pages = {
     'name': true,
     'data': false,
-    'about': false,
-    'disclaimer': false,
-    'aboutUs': false
   };
 
   toggle(page : string) : void {
