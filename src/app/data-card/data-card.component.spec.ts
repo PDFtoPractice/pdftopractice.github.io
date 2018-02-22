@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataCardComponent } from './data-card.component';
+import { ResultsCardComponent } from '../results-card/results-card.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -17,7 +18,10 @@ describe('DataCardComponent', () => {
   beforeEach(async(() => {
     mockService = new MockAdviceService();
     TestBed.configureTestingModule({
-      declarations: [ DataCardComponent ],
+      declarations: [
+        DataCardComponent,
+        ResultsCardComponent
+      ],
       imports: [
         FormsModule,
         MaterialImportsModule
