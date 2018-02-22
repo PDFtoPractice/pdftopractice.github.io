@@ -13,6 +13,7 @@ import { DataCardComponent } from './data-card/data-card.component';
 
 import { AdviceService } from './advice.service';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ResultsCardComponent } from './results-card/results-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     FilterCardComponent,
     DescriptionCardComponent,
     DataCardComponent,
-    NavigationComponent
+    NavigationComponent,
+    ResultsCardComponent
   ],
   imports: [
     BrowserModule,

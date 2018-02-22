@@ -5,6 +5,7 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { DescriptionCardComponent } from './description-card/description-card.component';
 import { DataCardComponent } from './data-card/data-card.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ResultsCardComponent } from './results-card/results-card.component';
 
 import { MaterialImportsModule } from './material-imports/material-imports.module';
 
@@ -20,7 +21,8 @@ describe('AppComponent', () => {
         NameCardComponent,
         DescriptionCardComponent,
         DataCardComponent,
-        NavigationComponent
+        NavigationComponent,
+        ResultsCardComponent
       ],
       imports: [
         FormsModule,
