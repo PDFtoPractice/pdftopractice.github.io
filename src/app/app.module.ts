@@ -7,8 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
-import { FilterCardComponent } from './filter-card/filter-card.component';
-import { DescriptionCardComponent } from './description-card/description-card.component';
 import { DataCardComponent } from './data-card/data-card.component';
 
 import { AdviceService } from './advice.service';
@@ -19,8 +17,6 @@ import { ResultsCardComponent } from './results-card/results-card.component';
   declarations: [
     AppComponent,
     NameCardComponent,
-    FilterCardComponent,
-    DescriptionCardComponent,
     DataCardComponent,
     NavigationComponent,
     ResultsCardComponent
