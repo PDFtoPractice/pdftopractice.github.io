@@ -2,7 +2,6 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
-import { DescriptionCardComponent } from './description-card/description-card.component';
 import { DataCardComponent } from './data-card/data-card.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ResultsCardComponent } from './results-card/results-card.component';
@@ -19,7 +18,6 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         NameCardComponent,
-        DescriptionCardComponent,
         DataCardComponent,
         NavigationComponent,
         ResultsCardComponent
