@@ -54,4 +54,8 @@ export class DataCardComponent implements OnInit {
       });
       this.showResults = true;
   }
+
+  toggle(page : string) {
+    this.showResults = false;
+  }
 }

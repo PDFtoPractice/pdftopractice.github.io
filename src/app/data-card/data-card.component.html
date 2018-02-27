@@ -52,6 +52,6 @@
       </mat-tab-group>
       <!-- <p>{{drugOperation.advice}}</p> -->
     </mat-card>
-    <app-results-card *ngIf="showResults" [results]="results"></app-results-card>
+    <app-results-card (toggled)="toggle($event)" *ngIf="showResults" [results]="results"></app-results-card>
   </div>
 </body>

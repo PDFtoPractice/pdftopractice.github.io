@@ -1,5 +1,8 @@
 <div>
   <mat-card>
+    <button mat-icon-button (click)="toggle('data')">
+      <mat-icon aria-label="Go back button">keyboard_backspace</mat-icon>
+    </button>
     <mat-card-header>
       <mat-card-title>Results</mat-card-title>
       <mat-card-subtitle>{{results.type}}</mat-card-subtitle>
