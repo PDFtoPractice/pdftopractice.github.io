@@ -6,6 +6,10 @@
   font-family: Roboto;
 }
 
+html, body {
+  background-color: #F5F5F5;
+}
+
 /*
  * Webfont: CoreCircus by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/
