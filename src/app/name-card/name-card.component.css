@@ -1,5 +1,6 @@
 div {
   padding-top: 60px;
+  padding-bottom: 10px;
 }
 
 h2 {
@@ -24,6 +25,8 @@ h3 {
 #text-column {
   margin-left: 3%;
   margin-right: 3%;
+  margin-top: -2%;
+  width: 33.33%;
 }
 
 body {
