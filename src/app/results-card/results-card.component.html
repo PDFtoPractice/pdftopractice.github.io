@@ -1,5 +1,8 @@
 <div *ngFor="let result of results">
   <mat-card>
+    <button mat-icon-button (click)="toggle('data')">
+      <mat-icon aria-label="Go back button">keyboard_backspace</mat-icon>
+    </button>
     <mat-list>
       <mat-list-item><a href="{{result.link}}">{{result.source}}</a></mat-list-item>
       <mat-list-item [innerHTML]="result.advice"></mat-list-item>

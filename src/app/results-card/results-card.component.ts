@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { Results } from '../model/Results';
 
@@ -19,9 +19,14 @@ export class ResultsCardComponent implements OnInit {
     return this._results;
   }
 
+  @Output() toggled = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggle(page : string) {
+    this.toggled.emit(page);
+  }
 }
