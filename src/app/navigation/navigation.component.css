@@ -34,6 +34,10 @@ ul.left li {
   font-weight: bold;
 }
 
+ul.left li:hover {
+  font-size: 20.5px;
+}
+
 ul.right li button {
   font-size: 15px;
   border: none;

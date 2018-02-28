@@ -1,58 +1,139 @@
-div {
-  padding-top: 60px;
-  padding-bottom: 10px;
-}
-
-h2 {
-  font-size: 28px;
-  text-align: center;
-  padding-top: 7%;
-  color: white;
-  cursor: pointer;
-}
-
-h3 {
-  text-align: center;
-}
-
-#card-container {
-  display: flex;
-  justify-content: space-around;
-  opacity: 0.9;
-  margin-left: 5px;
-}
-
-#text-column {
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-top: -2%;
-  width: 33.33%;
-}
-
 body {
   background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
   background-repeat: no-repeat;
-  height: 300px;
+  height: 400px;
   margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
 }
 
-@media only screen and (max-width:500px) {
-  body {
-    height: 200px;
+div {
+
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.header-wrap {
+  min-height: 215px;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.card-container__heading {
+  text-align: center;
+}
+
+.card-container__text {
+  font-family: 'Mukta Vaani', sans-serif;
+}
+
+@media only screen and (min-width:1100px) {
+
+  #card-container {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0.9;
+    margin-left: 5px;
+  }
+
+  #text-column {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: -2%;
+    width: 33.33%;
   }
 
   h2 {
-    font-size: 20px;
+    margin-top: 65px;
+  }
+
+  h2:hover {
+    font-size: 28.5px;
+  }
+
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    height: 240px;
+  }
+
+  .header-wrap {
+    padding-top: 50px;
+    min-height: 125px;
+  }
+
+  h2 {
+    font-size: 18px;
+    padding-top: 0px;
+    margin-top: 84px;
+  }
+
+  h2:hover {
+    font-size: 19px;
   }
 
   #card-container {
     display: block;
-    margin-right: 25px;
+    padding-top: 10px;
   }
 
   #text-column {
-    width: 100%;
+    margin: 0 0;
+    padding: 10px 8% 10px;
+  }
+
+  .card-container__heading, .card-container__text {
+    text-align: left;
+  }
+
+  #text-column:nth-child(1) {
+    padding-top: 10px;
+  }
+  #text-column:nth-child(2) {
+    background-color: #f0f3f5;
+  }
+
+  .card-container__heading {
+    font-size: 16px;
+  }
+
+  .card-container__text {
+    font-size: 14px;
+  }
+
+  .mat-menu-content {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  #text-column,#text-column:nth-child(1) {
+    padding: 20px 8%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header-wrap h2 {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+
+
+  .card-container__text, .card-container__heading {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .header-wrap {
+    padding: 10px 8px;
   }
 }
