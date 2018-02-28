@@ -3,6 +3,14 @@
   padding-left: 3%;
 }
 
+.full-screen {
+  visibility: visible;
+}
+
+.small-screen {
+  visibility: hidden;
+}
+
 .right {
   float: right;
   padding-right: 0 3%;
@@ -34,4 +42,28 @@ ul.right li button {
 
 a {
   cursor: pointer;
+}
+
+@media only screen and (max-width:500px) {
+  .full-screen {
+    visibility: hidden;
+  }
+  .small-screen {
+    visibility: visible;
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+  .right {
+    float: right;
+    position: fixed;
+    margin-right: 3%;
+    margin-left: 70%;
+  }
+
+  .right::after {
+    display: none;
+  }
 }

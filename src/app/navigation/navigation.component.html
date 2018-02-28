@@ -2,8 +2,18 @@
   <ul class="left">
     <li id="header"><a (click)="toggle('name')">Should I Take?</a></li>
   </ul>
-  <ul class="right">
+  <ul class="right full-screen">
     <li><button mat-button (click)="toggle('name')">About</button></li>
     <li><button mat-button (click)="toggle('data')">Get Advice</button></li>
+  </ul>
+
+  <ul class="right small-screen">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="toggle('name')">About</button>
+      <button mat-button (click)="toggle('data')">Get Advice</button>
+    </mat-menu>
   </ul>
 </div>

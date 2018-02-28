@@ -25,3 +25,12 @@ body {
   margin-left: -10px;
   margin-right: -10px;
 }
+
+@media only screen and (max-width:500px) {
+  mat-card {
+    position: absolute;
+    width: 70%;
+    margin-top: 30px;
+    background: white;
+  }
+}
