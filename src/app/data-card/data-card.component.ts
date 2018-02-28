@@ -18,12 +18,13 @@ import { MatTabChangeEvent } from '@angular/material';
 })
 export class DataCardComponent implements OnInit {
 
-  public results : Results = new Results(QueryType.DrugInteraction,
-    MedicalType.OngoingMedication,
-    MedicalType.NewMedication,
-    '', '', '', '');
+  public type : QueryType = QueryType.DrugCondition;
+  public value1 : string = '';
+  public value2 : string = '';
 
-    public showResults : boolean = false;
+  public results : Results[] = [];
+
+  public showResults : boolean = false;
 
   constructor(private adviceService : AdviceService) { }
 
@@ -31,25 +32,24 @@ export class DataCardComponent implements OnInit {
   }
 
   updateType(event : MatTabChangeEvent) : void {
-    this.results.value1 = '';
-    this.results.value2 = '';
+    this.value1 = '';
+    this.value2 = '';
     switch (event.tab.textLabel) {
       case 'Drug Interaction':
-        this.results.type = QueryType.DrugInteraction;
+        this.type = QueryType.DrugInteraction;
         break;
       case 'Drug-Operation':
-        this.results.type = QueryType.DrugOperation;
+        this.type = QueryType.DrugOperation;
         break;
       case 'Drug-Condition':
-        this.results.type = QueryType.DrugCondition;
+        this.type = QueryType.DrugCondition;
         break;
     }
   }
 
-  getDrugOperation() : void {
-    // TODO: Sanitise inputs (maybe dropdown in html)
-    this.adviceService.getAdvice(this.results.type, this.results.value1, this.results.value2)
-      .subscribe((results : Results) => {
+  getAdvice() : void {
+    this.adviceService.getAdvice(this.type, this.value1, this.value2)
+      .subscribe((results : Results[]) => {
         this.results = results;
       });
       this.showResults = true;
