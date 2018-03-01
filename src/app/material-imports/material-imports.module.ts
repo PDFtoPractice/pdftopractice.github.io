@@ -33,11 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatListModule,
     MatIconModule,
     MatMenuModule,
-<<<<<<< HEAD
-    MatProgressSpinnerModule
-=======
+    MatProgressSpinnerModule,
     MatAutocompleteModule
->>>>>>> origin/master
   ],
   declarations: []
 })
