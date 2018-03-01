@@ -10,6 +10,10 @@ import { MedicalType } from '../enums/medicalType';
 
 import { ResultsCardComponent } from '../results-card/results-card.component';
 import { MatTabChangeEvent } from '@angular/material';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
 
 @Component({
   selector: 'app-data-card',
@@ -19,21 +23,38 @@ import { MatTabChangeEvent } from '@angular/material';
 export class DataCardComponent implements OnInit {
 
   public type : QueryType = QueryType.DrugCondition;
-  public value1 : string = '';
-  public value2 : string = '';
+  public drug1 : string;
+  public drug2 : string;
+  public drug3 : string;
+  public operation : string;
+  public drug4 : string;
+  public condition : string;
 
   public results : Results[] = [];
 
   public showResults : boolean = false;
 
-  constructor(private adviceService : AdviceService) { }
+  public drugCtrl : FormControl;
+  public filteredDrugs : Observable<any[]>;
+
+  constructor(private adviceService : AdviceService) {
+    this.drugCtrl = new FormControl();
+    this.filteredDrugs = this.drugCtrl.valueChanges
+      .pipe(
+        startWith(''),
+        map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
+      );
+  }
+
+  filterDrugs(name : string) {
+    return this.drugs.filter(drug =>
+      drug.toLowerCase().indexOf(name.toLowerCase()) === 0);
+  }
 
   ngOnInit() {
   }
 
   updateType(event : MatTabChangeEvent) : void {
-    this.value1 = '';
-    this.value2 = '';
     switch (event.tab.textLabel) {
       case 'Drug Interaction':
         this.type = QueryType.DrugInteraction;
@@ -47,8 +68,25 @@ export class DataCardComponent implements OnInit {
     }
   }
 
+  drugs : string[] = ['Aspirin', 'Ibuprofen', 'Paracetamol'];
+
   getAdvice() : void {
-    this.adviceService.getAdvice(this.type, this.value1, this.value2)
+    let value1, value2;
+    switch (this.type) {
+      case QueryType.DrugCondition:
+        value1 = this.drug4;
+        value2 = this.condition;
+        break;
+      case QueryType.DrugInteraction:
+        value1 = this.drug1;
+        value2 = this.drug2;
+        break;
+      case QueryType.DrugOperation:
+        value1 = this.drug3;
+        value2 = this.operation;
+        break;
+    }
+    this.adviceService.getAdvice(this.type, value1, value2)
       .subscribe((results : Results[]) => {
         this.results = results;
       });
