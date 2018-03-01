@@ -34,3 +34,13 @@ body {
     background: white;
   }
 }
+
+@media only screen and (max-width:910px) {
+  .mat-tab-header-pagination {
+    display: none;
+  }
+  .mat-tab-label {
+    width: 100%;
+    display: block;
+  }
+}

@@ -1,30 +1,30 @@
 <body>
   <div id="outer-container">
-    <h2 (click)="toggle('data')">Get Quick Advice on Drug Interaction</h2>
-
-    <div id="card-container">
-      <div id="text-column">
-        <h3>What is "Should I Take"?</h3>
-        <p>"Should I Take?" is a web application that helps you get quick advice on whether you should take a drug or not.
-           It reads through the leaflets of drugs for you and displays the most relevant information for your case.
-           If you need extra information or the advice is not clear, "Should I Take?" also provies you with a link to the
-           appropriate documentation. </p>
+      <div class="header-wrap">
+        <h2 (click)="toggle('data')">Get Quick Advice on Drug Interaction</h2>
       </div>
-      <div id="text-column">
-        <h3>Who are we?</h3>
-        <p>Greetings, dear user, from the Foxtrot team! We are a group of 6 Computer Science students at the University
-           of Cambridge and we would like to firstly thank you for trying out our app. We are proud of "Should I Take?" -
-           we tried to find the perfect amount of perseverence and determination - and we hope that you will find it
-           as useful as we think it is. Whether you have an urgent situation and you need quick medical advice, or
-           you just want to find fun facts about drug interactions, we hope you will enjoy this app!</p>
+      <div id="card-container">
+          <div id="text-column">
+            <h3 class="card-container__heading">What is "Should I Take"?</h3>
+            <p class="card-container__text">"Should I Take?" is a web application that helps you get quick advice on whether you should take a drug or not.
+               It reads through the leaflets of drugs for you and displays the most relevant information for your case.
+               If you need extra information or the advice is not clear, "Should I Take?" also provides you with a link to the
+               appropriate documentation. </p>
+          </div>
+          <div id="text-column">
+            <h3 class="card-container__heading">Who we are</h3>
+            <p class="card-container__text">Hello from the Foxtrot team! We are a group of 6 Computer Science students at the University
+               of Cambridge and we would like to thank you for trying out our app. We are very proud of "Should I Take?" -
+               and we hope that you enjoy using this tool as much as we enjoyed making it. Whether you have an urgent situation and you need quick medical advice, or
+               if you just want to find fun facts about drug interactions, we hope you will enjoy this app!</p>
+          </div>
+          <div id="text-column">
+            <h3 class="card-container__heading">Disclaimer</h3>
+              <p class="card-container__text">"Should I Take?" was developed based on documentation available online about drugs and their interactions with
+               other drugs, conditions and operations. None of the members of the Foxtrot team have medical expertise and the
+               advice is computed by a machine trained to identify key information. If unsure, please have a read of the medical documents
+               suggested by the app or contact your doctor.</p>
+          </div>
       </div>
-      <div id="text-column">
-        <h3>Disclaimer</h3>
-        <p>"Should I Take?" was developed based on documentation available online about drugs and their interactions with
-           other drugs, conditions and operations. None of the members of the Foxtrot team have medical expertise and the
-           advice is computed by a machine trained to identify key information. If unsure, please follow the links
-           provided by the app or visit your doctor.</p>
-      </div>
-    </div>
   </div>
 </body>
