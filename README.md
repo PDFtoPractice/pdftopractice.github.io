@@ -20,7 +20,7 @@ There are three use cases or types of queries available to users. The first is d
 
 "Should I Take?" was developed based on documentation available online about drugs and their interactions with other drugs, conditions and operations. None of the members of the Foxtrot team have medical expertise and the advice is computed by a machine trained to identify key information. If unsure, please have a read of the medical documents suggested by the app or contact your doctor.
 
-
+# (Angular)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
