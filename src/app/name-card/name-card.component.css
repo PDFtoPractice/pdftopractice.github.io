@@ -24,8 +24,6 @@ h2 {
   cursor: pointer;
 }
 
-
-
 .card-container__heading {
   text-align: center;
 }
@@ -66,7 +64,7 @@ h2 {
   }
 
   .header-wrap {
-    padding-top: 50px;
+    padding-top: 25px;
     min-height: 125px;
   }
 

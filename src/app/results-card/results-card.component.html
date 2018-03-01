@@ -1,11 +1,10 @@
 <div *ngFor="let result of results">
   <mat-card>
-    <button mat-icon-button (click)="toggle('data')">
-      <mat-icon aria-label="Go back button">keyboard_backspace</mat-icon>
-    </button>
-    <mat-list>
-      <mat-list-item><a href="{{result.link}}">{{result.source}}</a></mat-list-item>
-      <mat-list-item [innerHTML]="result.advice"></mat-list-item>
-    </mat-list>
+    <mat-card-header>
+      <a href="{{result.link}}">{{result.source}}</a>
+    </mat-card-header>
+    <div id="advice" [innerHTML]="result.advice"></div>
   </mat-card>
 </div>
+
+<button mat-button (click)="toggle('data')">Go Back</button>
