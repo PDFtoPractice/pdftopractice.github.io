@@ -6,12 +6,22 @@
           <form>
             <mat-form-field>
               <mat-label>First Drug Name</mat-label>
-              <input matInput name="drug1" required="true" placeholder="Please provide the name of the first drug." [(ngModel)]="value1">
+              <input matInput name="drug1" placeholder="Please provide the name of the first drug." [matAutocomplete]="auto" [formControl]="drugCtrl" [(ngModel)]="drug1">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
+                  {{drug}}
+                </mat-option>
+              </mat-autocomplete>
             </mat-form-field>
 
             <mat-form-field>
               <mat-label>Second Drug Name</mat-label>
-              <input matInput name="drug2" required="true" placeholder="Please provide the name of the second drug." [(ngModel)]="value2">
+              <input matInput name="drug2" placeholder="Please provide the name of the second drug." [matAutocomplete]="auto2" [formControl]="drugCtrl" [(ngModel)]="drug2">
+              <mat-autocomplete #auto2="matAutocomplete">
+                <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
+                  {{drug}}
+                </mat-option>
+              </mat-autocomplete>
             </mat-form-field>
 
             <button (click)="getAdvice()" mat-button color="primary">Get Results</button>
@@ -22,12 +32,17 @@
           <form>
             <mat-form-field>
               <mat-label>Ongoing Medication</mat-label>
-              <input matInput name="drug1" required="true" placeholder="Please provide a drug you are currently taking." [(ngModel)]="value1">
+              <input matInput name="drug3" placeholder="Please provide a drug you are currently taking." [matAutocomplete]="auto3" [formControl]="drugCtrl" [(ngModel)]="drug3">
+              <mat-autocomplete #auto3="matAutocomplete">
+                  <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
+                    {{drug}}
+                  </mat-option>
+                </mat-autocomplete>
             </mat-form-field>
 
             <mat-form-field>
               <mat-label>Operation</mat-label>
-              <input matInput name="operation" required="true" placeholder="Please provide the operation you are going to have." [(ngModel)]="value2">
+              <input matInput name="operation" placeholder="Please provide the operation you are going to have." [(ngModel)]="operation">
             </mat-form-field>
 
             <button (click)="getAdvice()" mat-button color="primary">Get Results</button>
@@ -37,13 +52,18 @@
         <mat-tab label="Drug-Condition">
           <form>
             <mat-form-field>
-              <mat-label>Medical Condition</mat-label>
-              <input matInput name="condition" required="true" placeholder="Please provide your medical condition." [(ngModel)]="value1">
+              <mat-label>Drug Name</mat-label>
+              <input matInput name="drug" placeholder="Please provide the name of the drug you want to take." [matAutocomplete]="auto4" [formControl]="drugCtrl" [(ngModel)]="drug4">
+              <mat-autocomplete #auto4="matAutocomplete">
+                  <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
+                    {{drug}}
+                  </mat-option>
+                </mat-autocomplete>
             </mat-form-field>
 
             <mat-form-field>
-              <mat-label>Drug Name</mat-label>
-              <input matInput name="drug" required="true" placeholder="Please provide the name of the drug you want to take." [(ngModel)]="value2">
+              <mat-label>Medical Condition</mat-label>
+              <input matInput name="condition" placeholder="Please provide your medical condition." [(ngModel)]="condition">
             </mat-form-field>
 
             <button (click)="getAdvice()" mat-button color="primary">Get Results</button>

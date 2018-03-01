@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MaterialImportsModule } from './material-imports/material-imports.module';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
@@ -25,7 +25,8 @@ import { ResultsCardComponent } from './results-card/results-card.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    ReactiveFormsModule
   ],
   providers: [AdviceService],
   bootstrap: [AppComponent]
