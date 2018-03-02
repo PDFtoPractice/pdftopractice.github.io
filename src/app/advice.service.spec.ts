@@ -3,8 +3,9 @@ import { TestBed, inject } from '@angular/core/testing';
 import { AdviceService } from './advice.service';
 import { MockAdviceService } from './mock-advice.service';
 
+import { Results } from './model/Results';
+
 import { Observable } from 'rxjs/Observable';
-import { Advice } from './model/Advice';
 
 let mockService;
 describe('AdviceService', () => {
@@ -20,10 +21,11 @@ describe('AdviceService', () => {
   });
 
   it('should return advice observable', () => {
-    mockService.getAdvice('DrugA', 'OperationA').subscribe((advice : Advice) => {
-      expect(advice.drug1).toBe('DrugA');
-      expect(advice.operation).toBe('OperationA');
-      expect(advice.advice).toBe('Consult a doctor');
+    mockService.getAdvice('drug', 'operation').subscribe((advice : Results) => {
+      expect(advice.source).toBe('source');
+      expect(advice.drug).toBe('drug');
+      expect(advice.link).toBe('link');
+      expect(advice.advice).toBe('advice');
     });
   });
 });

@@ -19,20 +19,21 @@ import { map } from 'rxjs/operators/map';
 })
 export class DataCardComponent implements OnInit {
 
-  public type: QueryType = QueryType.DrugInteraction;
-  public drug1: string;
-  public drug2: string;
-  public drug3: string;
-  public operation: string;
-  public drug4: string;
-  public condition: string;
+  type: QueryType = QueryType.DrugInteraction;
+  drug1: string;
+  drug2: string;
+  drug3: string;
+  operation: string;
+  drug4: string;
+  condition: string;
 
-  public results: Results[] = [];
+  results: Results[] = [];
 
-  public showResults: boolean = false;
+  showResults: boolean = false;
+  showError: boolean = false;
 
-  public drugCtrl: FormControl;
-  public filteredDrugs: Observable<any[]>;
+  drugCtrl: FormControl;
+  filteredDrugs: Observable<any[]>;
 
   constructor(private adviceService: AdviceService) {
     this.drugCtrl = new FormControl();
@@ -86,8 +87,15 @@ export class DataCardComponent implements OnInit {
     this.adviceService.getAdvice(this.type, value1, value2)
       .subscribe((results: Results[]) => {
         this.results = results;
+        this.showResults = true;
+      }, (err) => {
+        console.log(err);
+        this.showError = true;
       });
-    this.showResults = true;
+  }
+
+  goBack() {
+    this.showError = false;
   }
 
   toggle(page: string) {
