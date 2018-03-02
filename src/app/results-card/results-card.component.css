@@ -21,3 +21,10 @@ button {
   background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
   opacity: 0.9;
 }
+
+#spinner {
+  width: 10px;
+  margin-left: 45%;
+  margin-right: 45%;
+  color: warm;
+}

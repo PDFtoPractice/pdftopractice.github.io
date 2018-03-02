@@ -22,31 +22,31 @@ import { map } from 'rxjs/operators/map';
 })
 export class DataCardComponent implements OnInit {
 
-  public type : QueryType = QueryType.DrugCondition;
-  public drug1 : string;
-  public drug2 : string;
-  public drug3 : string;
-  public operation : string;
-  public drug4 : string;
-  public condition : string;
+  public type: QueryType = QueryType.DrugInteraction;
+  public drug1: string;
+  public drug2: string;
+  public drug3: string;
+  public operation: string;
+  public drug4: string;
+  public condition: string;
 
-  public results : Results[] = [];
+  public results: Results[] = [];
 
-  public showResults : boolean = false;
+  public showResults: boolean = false;
 
-  public drugCtrl : FormControl;
-  public filteredDrugs : Observable<any[]>;
+  public drugCtrl: FormControl;
+  public filteredDrugs: Observable<any[]>;
 
-  constructor(private adviceService : AdviceService) {
+  constructor(private adviceService: AdviceService) {
     this.drugCtrl = new FormControl();
     this.filteredDrugs = this.drugCtrl.valueChanges
       .pipe(
-        startWith(''),
-        map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
+      startWith(''),
+      map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
       );
   }
 
-  filterDrugs(name : string) {
+  filterDrugs(name: string) {
     return this.drugs.filter(drug =>
       drug.toLowerCase().indexOf(name.toLowerCase()) === 0);
   }
@@ -54,9 +54,10 @@ export class DataCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateType(event : MatTabChangeEvent) : void {
+  updateType(event: MatTabChangeEvent): void {
+    console.log(event.tab.textLabel);
     switch (event.tab.textLabel) {
-      case 'Drug Interaction':
+      case 'Drug-Interaction':
         this.type = QueryType.DrugInteraction;
         break;
       case 'Drug-Operation':
@@ -68,10 +69,11 @@ export class DataCardComponent implements OnInit {
     }
   }
 
-  drugs : string[] = ['Aspirin', 'Ibuprofen', 'Paracetamol'];
+  drugs: string[] = ['Aspirin', 'Ibuprofen', 'Paracetamol'];
 
-  getAdvice() : void {
+  getAdvice(): void {
     let value1, value2;
+    console.log(this.type);
     switch (this.type) {
       case QueryType.DrugCondition:
         value1 = this.drug4;
@@ -87,13 +89,14 @@ export class DataCardComponent implements OnInit {
         break;
     }
     this.adviceService.getAdvice(this.type, value1, value2)
-      .subscribe((results : Results[]) => {
+      .subscribe((results: Results[]) => {
         this.results = results;
       });
-      this.showResults = true;
+    this.showResults = true;
   }
 
-  toggle(page : string) {
+  toggle(page: string) {
     this.showResults = false;
+    this.type = QueryType.DrugInteraction;
   }
 }

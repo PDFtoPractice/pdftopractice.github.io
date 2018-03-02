@@ -1,5 +1,5 @@
 export enum QueryType {
-  DrugInteraction = "Drug Interaction",
+  DrugInteraction = "Drug-Interaction",
   DrugCondition = "Drug-Condition",
-  DrugOperation = "Drug Operation"
+  DrugOperation = "Drug-Operation"
 }
