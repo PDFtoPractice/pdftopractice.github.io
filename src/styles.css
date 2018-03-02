@@ -11,6 +11,10 @@ html, body {
   background-color: #F5F5F5;
 }
 
+.highlight {
+  color: rgb(118, 72, 179);
+}
+
 /*
  * Webfont: CoreCircus by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/
