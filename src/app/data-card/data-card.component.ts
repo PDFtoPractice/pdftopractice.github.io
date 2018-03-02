@@ -98,5 +98,11 @@ export class DataCardComponent implements OnInit {
   toggle(page: string) {
     this.showResults = false;
     this.type = QueryType.DrugInteraction;
+    this.drug1 = '';
+    this.drug2 = '';
+    this.drug3 = '';
+    this.operation = '';
+    this.drug4 = '';
+    this.condition = '';
   }
 }
