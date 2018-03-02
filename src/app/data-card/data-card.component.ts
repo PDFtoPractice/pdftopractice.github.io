@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { AdviceService } from '../advice.service';
 
-import { Advice } from '../model/Advice';
 import { Results } from '../model/Results';
 
 import { QueryType } from '../enums/queryType';
