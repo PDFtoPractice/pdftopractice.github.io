@@ -1,16 +1,15 @@
 body {
   background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
   margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
 }
 
 div {
-
   padding-top: 60px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .header-wrap {
@@ -39,6 +38,7 @@ h2 {
     justify-content: space-around;
     opacity: 0.9;
     margin-left: 5px;
+    margin-top: -130px;
   }
 
   #text-column {
