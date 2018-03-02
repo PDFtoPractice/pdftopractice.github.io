@@ -108,6 +108,14 @@ export class DataCardComponent implements OnInit {
 
   goBack() {
     this.showError = false;
+    this.type = QueryType.DrugInteraction;
+    this.drug1 = '';
+    this.drug2 = '';
+    this.drug3 = '';
+    this.operation = '';
+    this.drug4 = '';
+    this.condition = '';
+    this.results = [];
   }
 
   toggle(page: string) {
