@@ -33,6 +33,7 @@ export class DataCardComponent implements OnInit {
 
   showResults: boolean = false;
   showError: boolean = false;
+  errorMsg: string;
 
   drugCtrl: FormControl;
   filteredDrugs: Observable<any[]>;
@@ -72,8 +73,7 @@ export class DataCardComponent implements OnInit {
   drugs: string[] = ['Aspirin', 'Ibuprofen', 'Paracetamol'];
 
   getAdvice(): void {
-    let value1, value2;
-    console.log(this.type);
+    let value1 = '', value2 = '';
     switch (this.type) {
       case QueryType.DrugCondition:
         value1 = this.drug4;
@@ -88,14 +88,20 @@ export class DataCardComponent implements OnInit {
         value2 = this.operation;
         break;
     }
-    this.adviceService.getAdvice(this.type, value1, value2)
+    if (!value1 || !value2) {
+      this.showError = true;
+      this.errorMsg = 'Please ensure you have provided two inputs.';
+    } else {
+      this.adviceService.getAdvice(this.type, value1, value2)
       .subscribe((results: Results[]) => {
         this.results = results;
         this.showResults = true;
       }, (err) => {
         console.log(err);
         this.showError = true;
+        this.errorMsg = 'Error handling request, please try again.';
       });
+    }
   }
 
   goBack() {
