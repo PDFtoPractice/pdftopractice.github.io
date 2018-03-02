@@ -44,3 +44,10 @@ body {
     display: block;
   }
 }
+
+.button-container {
+  padding: 0;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}

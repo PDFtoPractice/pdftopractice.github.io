@@ -33,6 +33,8 @@ export class DataCardComponent implements OnInit {
   showError: boolean = false;
   errorMsg: string;
 
+  loading: boolean = false;
+
   drugCtrl: FormControl;
   filteredDrugs: Observable<any[]>;
 
@@ -89,11 +91,14 @@ export class DataCardComponent implements OnInit {
       this.showError = true;
       this.errorMsg = 'Please ensure you have provided two inputs.';
     } else {
+      this.loading = true;
       this.adviceService.getAdvice(this.type, value1, value2)
       .subscribe((results: Results[]) => {
         this.results = results;
         this.showResults = true;
+        this.loading = false;
       }, (err) => {
+        this.loading = false;
         console.log(err);
         this.showError = true;
         this.errorMsg = 'Error handling request, please try again.';
