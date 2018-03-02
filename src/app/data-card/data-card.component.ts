@@ -2,12 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { AdviceService } from '../advice.service';
 
-import { Advice } from '../model/Advice';
 import { Results } from '../model/Results';
 
 import { QueryType } from '../enums/queryType';
-import { MedicalType } from '../enums/medicalType';
-
 import { ResultsCardComponent } from '../results-card/results-card.component';
 import { MatTabChangeEvent } from '@angular/material';
 import { FormControl } from '@angular/forms';
@@ -55,7 +52,6 @@ export class DataCardComponent implements OnInit {
   }
 
   updateType(event: MatTabChangeEvent): void {
-    console.log(event.tab.textLabel);
     switch (event.tab.textLabel) {
       case 'Drug-Interaction':
         this.type = QueryType.DrugInteraction;
@@ -73,7 +69,6 @@ export class DataCardComponent implements OnInit {
 
   getAdvice(): void {
     let value1, value2;
-    console.log(this.type);
     switch (this.type) {
       case QueryType.DrugCondition:
         value1 = this.drug4;
@@ -104,5 +99,6 @@ export class DataCardComponent implements OnInit {
     this.operation = '';
     this.drug4 = '';
     this.condition = '';
+    this.results = [];
   }
 }
