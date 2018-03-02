@@ -21,3 +21,9 @@ button {
   background: linear-gradient(to bottom right, rgb(41, 190, 170), rgb(118, 72, 179));
   opacity: 0.9;
 }
+
+@media only screen and (max-width:500px) {
+  #outer {
+    padding-top: 50px;
+  }
+}
