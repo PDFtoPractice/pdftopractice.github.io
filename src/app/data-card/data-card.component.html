@@ -1,6 +1,6 @@
 <body>
   <div>
-    <mat-card *ngIf="!showResults">
+    <mat-card *ngIf="!showResults && !showError">
       <mat-tab-group (selectedTabChange)="updateType($event)">
         <mat-tab label="Drug-Interaction">
           <form>
@@ -72,5 +72,11 @@
       </mat-tab-group>
     </mat-card>
     <app-results-card (toggled)="toggle($event)" *ngIf="showResults" [results]="results"></app-results-card>
+    <mat-card *ngIf="showError">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+      Error handling request, please try again.
+    </mat-card>
   </div>
 </body>

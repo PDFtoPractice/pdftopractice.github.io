@@ -9,7 +9,7 @@ import { Results } from '../model/Results';
 })
 export class ResultsCardComponent implements OnInit {
 
-  public _results : Results[];
+  _results : Results[];
 
   @Input() set results(value : Results[]) {
     this._results = value;
