@@ -28,3 +28,9 @@ button {
   margin-right: 45%;
   color: warm;
 }
+
+@media only screen and (max-width:500px) {
+  #outer {
+    padding-top: 50px;
+  }
+}
