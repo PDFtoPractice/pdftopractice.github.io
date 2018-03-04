@@ -125,13 +125,15 @@ export class DataCardComponent implements OnInit {
     }
   }
 
-  clearAuto() {
-    this.filteredDrugs = Observable.of(this.drugs);
-    this.filteredDrugs = this.drugCtrl.valueChanges
-      .pipe(
-      startWith(''),
-      map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
-      );
+  clearAuto(drug: string) {
+    if (drug == '' || !drug) {
+      this.filteredDrugs = Observable.of(this.drugs);
+      this.filteredDrugs = this.drugCtrl.valueChanges
+        .pipe(
+        startWith(''),
+        map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
+        );
+    }
   }
 
   goBack() {
