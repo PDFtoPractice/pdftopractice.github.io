@@ -2,7 +2,7 @@
   <div *ngFor="let result of results">
     <mat-card>
       <mat-card-header>
-        <a href="{{result.link}}">{{result.source}}</a>
+        <a href="{{result.link}}" matTooltip="Click for full document">{{result.source}}</a>
       </mat-card-header>
       <div id="advice" [innerHTML]="result.advice"></div>
     </mat-card>

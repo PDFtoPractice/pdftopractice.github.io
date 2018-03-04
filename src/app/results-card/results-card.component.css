@@ -26,4 +26,8 @@ button {
   #outer {
     padding-top: 50px;
   }
+
+  mat-card {
+    width: 95%;
+  }
 }
