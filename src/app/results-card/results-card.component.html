@@ -16,8 +16,10 @@
   <div *ngFor="let result of results">
     <mat-card>
       <mat-card-title>
-        <a href="{{result.link}}" matTooltip="Click for full document">{{result.source}}</a>
-        <a href="{{result.link}}" align="right"><mat-icon class="link">launch</mat-icon></a>
+        <a href="{{result.link}}" matTooltip="Click for full document">
+          {{result.source}}
+          <mat-icon class="link">launch</mat-icon>
+        </a>
       </mat-card-title>
       <div id="advice" [innerHTML]="result.advice"></div>
     </mat-card>
