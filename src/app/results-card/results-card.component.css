@@ -8,11 +8,21 @@ a {
   font-weight: bold;
   color: black;
   opacity: 0.9;
-  padding-left: 10px;
   margin-bottom: 10px;
+  vertical-align: middle;
 }
 
-button:not(.back) {
+.mat-card-title {
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.link.mat-icon {
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.mat-button {
   width: 10%;
   margin-left: 45%;
   margin-right: 45%;
