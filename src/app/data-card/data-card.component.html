@@ -6,7 +6,7 @@
           <form>
             <mat-form-field>
               <mat-label>First Drug Name</mat-label>
-              <input matInput name="drug1" placeholder="Please provide the name of the first drug." [matAutocomplete]="auto" [formControl]="drugCtrl" [(ngModel)]="drug1">
+              <input (click)="clearAuto()" matInput name="drug1" placeholder="Please provide the name of the first drug." [matAutocomplete]="auto" [formControl]="drugCtrl" [(ngModel)]="drug1">
               <mat-autocomplete #auto="matAutocomplete">
                 <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
                   {{drug}}
@@ -16,7 +16,7 @@
 
             <mat-form-field>
               <mat-label>Second Drug Name</mat-label>
-              <input matInput name="drug2" placeholder="Please provide the name of the second drug." [matAutocomplete]="auto2" [formControl]="drugCtrl" [(ngModel)]="drug2">
+              <input (click)="clearAuto()" matInput name="drug2" placeholder="Please provide the name of the second drug." [matAutocomplete]="auto2" [formControl]="drugCtrl" [(ngModel)]="drug2">
               <mat-autocomplete #auto2="matAutocomplete">
                 <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
                   {{drug}}
@@ -35,7 +35,7 @@
           <form>
             <mat-form-field>
               <mat-label>Ongoing Medication</mat-label>
-              <input matInput name="drug3" placeholder="Please provide a drug you are currently taking." [matAutocomplete]="auto3" [formControl]="drugCtrl" [(ngModel)]="drug3">
+              <input (click)="clearAuto()" matInput name="drug3" placeholder="Please provide a drug you are currently taking." [matAutocomplete]="auto3" [formControl]="drugCtrl" [(ngModel)]="drug3">
               <mat-autocomplete #auto3="matAutocomplete">
                   <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
                     {{drug}}
@@ -59,7 +59,7 @@
           <form>
             <mat-form-field>
               <mat-label>Drug Name</mat-label>
-              <input matInput name="drug" placeholder="Please provide the name of the drug you want to take." [matAutocomplete]="auto4" [formControl]="drugCtrl" [(ngModel)]="drug4">
+              <input (click)="clearAuto()" matInput name="drug" placeholder="Please provide the name of the drug you want to take." [matAutocomplete]="auto4" [formControl]="drugCtrl" [(ngModel)]="drug4">
               <mat-autocomplete #auto4="matAutocomplete">
                   <mat-option *ngFor="let drug of filteredDrugs | async" [value]="drug">
                     {{drug}}

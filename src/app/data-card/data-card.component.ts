@@ -11,6 +11,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
+import 'rxjs/add/observable/of';
 
 @Component({
   selector: 'app-data-card',
@@ -122,6 +123,15 @@ export class DataCardComponent implements OnInit {
         this.errorMsg = 'Error handling request, please try again.';
       });
     }
+  }
+
+  clearAuto() {
+    this.filteredDrugs = Observable.of(this.drugs);
+    this.filteredDrugs = this.drugCtrl.valueChanges
+      .pipe(
+      startWith(''),
+      map(drug => drug ? this.filterDrugs(drug) : this.drugs.slice())
+      );
   }
 
   goBack() {
