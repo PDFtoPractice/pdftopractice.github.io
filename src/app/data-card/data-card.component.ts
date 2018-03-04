@@ -31,6 +31,9 @@ export class DataCardComponent implements OnInit {
   value1: string;
   value2: string;
 
+  type1: string;
+  type2: string;
+
   results: Results[] = [];
 
   showResults: boolean = false;
@@ -106,14 +109,20 @@ export class DataCardComponent implements OnInit {
       case QueryType.DrugCondition:
         this.value1 = this.drug4;
         this.value2 = this.condition;
+        this.type1 = "Drug name";
+        this.type2 = "Condition name";
         break;
       case QueryType.DrugInteraction:
         this.value1 = this.drug1;
         this.value2 = this.drug2;
+        this.type1 = "First drug name";
+        this.type2 = "Second drug name";
         break;
       case QueryType.DrugOperation:
         this.value1 = this.drug3;
         this.value2 = this.operation;
+        this.type1 = "Drug name";
+        this.type2 = "Operation name";
         break;
     }
     if (!this.value1 || !this.value2) {

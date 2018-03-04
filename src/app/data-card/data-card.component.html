@@ -80,7 +80,7 @@
         </mat-tab>
       </mat-tab-group>
     </mat-card>
-    <app-results-card [value1]="value1" [value2]="value2" (toggled)="toggle($event)" *ngIf="showResults" [results]="results"></app-results-card>
+    <app-results-card [value1]="value1" [value2]="value2" [type1]="type1" [type2]="type2" (toggled)="toggle($event)" *ngIf="showResults" [results]="results"></app-results-card>
     <mat-card *ngIf="showError">
       <button mat-icon-button (click)="goBack()">
         <mat-icon>keyboard_backspace</mat-icon>

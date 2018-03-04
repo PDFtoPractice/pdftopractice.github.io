@@ -13,6 +13,8 @@ export class ResultsCardComponent implements OnInit {
 
   @Input() value1: string;
   @Input() value2: string;
+  @Input() type1: string;
+  @Input() type2: string;
 
   @Input() set results(value : Results[]) {
     this._results = value;
