@@ -11,6 +11,9 @@ export class ResultsCardComponent implements OnInit {
 
   _results : Results[];
 
+  @Input() value1: string;
+  @Input() value2: string;
+
   @Input() set results(value : Results[]) {
     this._results = value;
   }

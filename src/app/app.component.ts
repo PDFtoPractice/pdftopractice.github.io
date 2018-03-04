@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  public pages = {
+  pages = {
     'name': true,
     'data': false,
   };

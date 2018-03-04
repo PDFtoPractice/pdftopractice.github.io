@@ -1,4 +1,10 @@
 <div id="outer">
+  <mat-card>
+    <button class="back" mat-icon-button (click)="toggle('data')">
+      <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+    {{value1}} -- {{value2}}
+  </mat-card>
   <div *ngFor="let result of results">
     <mat-card>
       <mat-card-header>

@@ -28,6 +28,9 @@ export class DataCardComponent implements OnInit {
   drug4: string;
   condition: string;
 
+  value1: string;
+  value2: string;
+
   results: Results[] = [];
 
   showResults: boolean = false;
@@ -91,27 +94,27 @@ export class DataCardComponent implements OnInit {
     ];
 
   getAdvice(): void {
-    let value1 = '', value2 = '';
+    this.value1 = '', this.value2 = '';
     switch (this.type) {
       case QueryType.DrugCondition:
-        value1 = this.drug4;
-        value2 = this.condition;
+        this.value1 = this.drug4;
+        this.value2 = this.condition;
         break;
       case QueryType.DrugInteraction:
-        value1 = this.drug1;
-        value2 = this.drug2;
+        this.value1 = this.drug1;
+        this.value2 = this.drug2;
         break;
       case QueryType.DrugOperation:
-        value1 = this.drug3;
-        value2 = this.operation;
+        this.value1 = this.drug3;
+        this.value2 = this.operation;
         break;
     }
-    if (!value1 || !value2) {
+    if (!this.value1 || !this.value2) {
       this.showError = true;
       this.errorMsg = 'Please ensure you have provided two inputs.';
     } else {
       this.loading = true;
-      this.adviceService.getAdvice(this.type, value1, value2)
+      this.adviceService.getAdvice(this.type, this.value1, this.value2)
       .subscribe((results: Results[]) => {
         this.results = results;
         this.showResults = true;
