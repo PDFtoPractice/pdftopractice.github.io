@@ -69,7 +69,25 @@ export class DataCardComponent implements OnInit {
     }
   }
 
-  drugs: string[] = ['Aspirin', 'Ibuprofen', 'Paracetamol'];
+  drugs: string[] = [
+    'Warfarin',
+    'Warfarin sodium',
+    'Warfarin 0.5mg Tablets',
+    'Warfarin 1mg Tablets',
+    'Warfarin 3mg Tablets',
+    'Warfarin 5mg Tablets',
+    'Boots Ibuprofen 200 mg Caplets',
+    'Aspirin 75mg Dispersible Tablets',
+    'Aspirin 300mg Soluble Tablets',
+    'Aspirin 300mg Caplets',
+    'Boots Aspirin 75mg Dispersible Tablets',
+    'Aspirin Suppositories 150mg',
+    'Aspirin Suppositories 300mg',
+    'Venlafaxine  37.5 Mg Tablets  ',
+    'Venlafaxine 75 Mg Tablets',
+    'Venlafaxine',
+    'Alcohol'
+    ];
 
   getAdvice(): void {
     let value1 = '', value2 = '';
